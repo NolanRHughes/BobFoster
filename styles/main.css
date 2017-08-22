@@ -1,0 +1,103 @@
+* {
+  font-family: Sumana, sans-serif; }
+
+.main {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white; }
+
+#nav {
+  background: black;
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+  justify-content: center; }
+  #nav #nav-bar-name {
+    font-size: 4vh; }
+  #nav .nav-buttons {
+    font-size: 2.5vh;
+    margin: auto 0vw auto 17vw; }
+    #nav .nav-buttons li {
+      margin: auto 2vw; }
+  #nav #contact-btn {
+    margin: auto 2vw; }
+  #nav .btn {
+    display: inline-block;
+    font-size: 2.5vh;
+    padding: 1vh 3vh;
+    background: none;
+    position: relative;
+    transition: color 0.25s ease;
+    border: 2px solid white; }
+  #nav .btn::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    color: white;
+    transform-origin: left;
+    transition: width 0.25s ease;
+    z-index: -1; }
+  #nav .btn:hover::after {
+    width: 100%; }
+  #nav .btn:focus, #nav .btn-success:focus {
+    color: silver; }
+  #nav ul {
+    margin: 0 0;
+    padding: 0 0;
+    display: flex; }
+    #nav ul li {
+      display: inline-block;
+      margin: auto auto; }
+      #nav ul li a {
+        color: white; }
+      #nav ul li a:hover {
+        color: silver;
+        border-bottom: 1px solid;
+        padding-bottom: 3px;
+        text-decoration: none; }
+
+#intro {
+  height: 100vh;
+  width: 100vw;
+  background: url("../img/piano-1.jpg") no-repeat center center; }
+  #intro h1 {
+    font-size: 6em; }
+
+#about {
+  height: 40vh;
+  width: 100vw;
+  color: black; }
+
+#footer {
+  height: 20vh;
+  width: 100vw; }
+
+@media only screen and (max-height: 1000px) {
+  #nav #nav-bar-name {
+    font-size: 6vh; }
+  #nav .nav-buttons {
+    margin: auto 0vw auto 38vw; } }
+@media only screen and (max-width: 992px) {
+  #nav #nav-bar-name {
+    font-size: 3.8vh; }
+  #nav .nav-buttons {
+    margin: auto 0vw auto 20vw; } }
+@media only screen and (max-width: 675px) {
+  #nav #nav-bar-name {
+    font-size: 3.8vh; }
+  #nav .nav-buttons {
+    font-size: 1.8vh;
+    margin: auto 0vw auto 20vw; }
+  #nav .btn {
+    font-size: 1.8vh; } }
+@media only screen and (max-width: 480px) {
+  #nav .nav-buttons {
+    margin: auto auto; } }
+
+/*# sourceMappingURL=main.css.map */
