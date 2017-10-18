@@ -1,43 +1,34 @@
-* {
-  font-family: Sumana, sans-serif;
-  // border: 1px solid black
-}
-
 $color-1: white;
 $color-2: black;
 $color-3: silver;
+$color-4: #aa2224;
 
-.main {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  color:$color-1;
+.wrapper {
+  font-family: Sumana, sans-serif;
 }
 
-#nav {
+.all-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+nav {
   background: $color-2;
   position: fixed;
   width: 100%;
-  // font-size: 1.5em;
+  font-size: 1.5em;
   height: 10vh;
-  justify-content: center;
-
-  #nav-bar-name {
-    font-size: 4vh;
-  }
+  justify-content: flex-end;
 
   .nav-buttons {
-    font-size: 2.5vh;
-    margin: auto 0vw auto 17vw;
-
-    li {
-      margin: auto 2vw;
-    }
-  }
-
-  #contact-btn {
-    margin: auto 2vw;
+    padding: 0 20px;
   }
 
   .btn {
@@ -48,8 +39,8 @@ $color-3: silver;
     position: relative;
     transition:color 0.25s ease;
     border:2px solid $color-1;
+    color: $color-1;
   }
-
   .btn::after {
     position: absolute;
     content: '';
@@ -58,52 +49,68 @@ $color-3: silver;
     width: 0;
     height: 100%;
     background-color: $color-1;
-    color: $color-1;
-    transform-origin:left;
     transition:width 0.25s ease;
     z-index:-1;
   }
-
   .btn:hover::after {
     width: 100%;
   }
-
   .btn:focus, .btn-success:focus{
       color: $color-3;
     }
 
-  ul {
-    margin: 0 0;
-    padding: 0 0;
-    display: flex;
+  a {
+    color: white;
+    padding: 0 20px;
+  }
+  a:hover {
+    color: $color-3;
+    text-decoration: none;
+  }
+}
 
-    li {
-      display: inline-block;
-      margin: auto auto;
+header {
+  height: 100vh;
+  width: 100vw;
+  background: url("../img/piano-1.jpg") no-repeat center center;
+  color: $color-1;
 
-      a {
-        color: $color-1;
-      }
+  h1 {
+    font-size: 6em;
+    margin: 0 auto;
 
-      a:hover {
-        color: $color-3;
-        border-bottom: 1px solid;
-        padding-bottom: 3px;
-        text-decoration: none;
-      }
+    span {
+      color: $color-4;
+    }
+  }
+
+  #logo {
+    margin: 0 10vw;
+    text-transform: uppercase;
+
+    h3, h1 {
+      text-align: left;
+    }
+
+    h3 {
+      word-spacing: 0.5em;
     }
   }
 }
 
-#intro {
-  height: 100vh;
+footer {
+  height: 20vh;
   width: 100vw;
-  background: url("../img/piano-1.jpg") no-repeat center center;
-
-  h1 {
-    font-size: 6em;
+  a {
+    color: $color-2;
+    cursor: pointer;
+  }
+  a:hover {
+    color: $color-3;
+    text-decoration: none;
   }
 }
+
 
 #about {
   height: 40vh;
@@ -111,55 +118,50 @@ $color-3: silver;
   color: $color-2;
 }
 
-#footer {
-  height: 20vh;
-  width: 100vw;
-}
-
-@media only screen and (max-height: 1000px) {
-  #nav {
-    #nav-bar-name {
-       font-size: 6vh;
-     }
-    .nav-buttons {
-      margin: auto 0vw auto 38vw;
-    }
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  #nav {
-    #nav-bar-name {
-      font-size: 3.8vh;
-    }
-
-    .nav-buttons {
-      margin: auto 0vw auto 20vw;
-    }
-  }
-}
-
-@media only screen and (max-width: 675px) {
-  #nav {
-    #nav-bar-name {
-      font-size: 3.8vh;
-    }
-
-    .nav-buttons {
-      font-size: 1.8vh;
-      margin: auto 0vw auto 20vw;
-    }
-
-    .btn {
-      font-size: 1.8vh;
-    }
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  #nav {
-    .nav-buttons {
-    margin: auto auto;
-    }
-  }
-}
+// @media only screen and (max-height: 1000px) {
+//   #nav {
+//     #nav-bar-name {
+//        font-size: 6vh;
+//      }
+//     .nav-buttons {
+//       margin: auto 0vw auto 38vw;
+//     }
+//   }
+// }
+//
+// @media only screen and (max-width: 992px) {
+//   #nav {
+//     #nav-bar-name {
+//       font-size: 3.8vh;
+//     }
+//
+//     .nav-buttons {
+//       margin: auto 0vw auto 20vw;
+//     }
+//   }
+// }
+//
+// @media only screen and (max-width: 675px) {
+//   #nav {
+//     #nav-bar-name {
+//       font-size: 3.8vh;
+//     }
+//
+//     .nav-buttons {
+//       font-size: 1.8vh;
+//       margin: auto 0vw auto 20vw;
+//     }
+//
+//     .btn {
+//       font-size: 1.8vh;
+//     }
+//   }
+// }
+//
+// @media only screen and (max-width: 480px) {
+//   #nav {
+//     .nav-buttons {
+//     margin: auto auto;
+//     }
+//   }
+// }

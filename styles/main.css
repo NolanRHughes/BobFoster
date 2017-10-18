@@ -1,37 +1,35 @@
-* {
+.wrapper {
   font-family: Sumana, sans-serif; }
 
-.main {
-  text-align: center;
+.all-center {
   display: flex;
+  align-items: center;
   justify-content: center;
-  flex-direction: column;
-  color: white; }
+  text-align: center; }
 
-#nav {
+.vertical-center {
+  display: flex;
+  align-items: center; }
+
+nav {
   background: black;
   position: fixed;
   width: 100%;
+  font-size: 1.5em;
   height: 10vh;
-  justify-content: center; }
-  #nav #nav-bar-name {
-    font-size: 4vh; }
-  #nav .nav-buttons {
-    font-size: 2.5vh;
-    margin: auto 0vw auto 17vw; }
-    #nav .nav-buttons li {
-      margin: auto 2vw; }
-  #nav #contact-btn {
-    margin: auto 2vw; }
-  #nav .btn {
+  justify-content: flex-end; }
+  nav .nav-buttons {
+    padding: 0 20px; }
+  nav .btn {
     display: inline-block;
     font-size: 2.5vh;
     padding: 1vh 3vh;
     background: none;
     position: relative;
     transition: color 0.25s ease;
-    border: 2px solid white; }
-  #nav .btn::after {
+    border: 2px solid white;
+    color: white; }
+  nav .btn::after {
     position: absolute;
     content: '';
     top: 0;
@@ -39,65 +37,50 @@
     width: 0;
     height: 100%;
     background-color: white;
-    color: white;
-    transform-origin: left;
     transition: width 0.25s ease;
     z-index: -1; }
-  #nav .btn:hover::after {
+  nav .btn:hover::after {
     width: 100%; }
-  #nav .btn:focus, #nav .btn-success:focus {
+  nav .btn:focus, nav .btn-success:focus {
     color: silver; }
-  #nav ul {
-    margin: 0 0;
-    padding: 0 0;
-    display: flex; }
-    #nav ul li {
-      display: inline-block;
-      margin: auto auto; }
-      #nav ul li a {
-        color: white; }
-      #nav ul li a:hover {
-        color: silver;
-        border-bottom: 1px solid;
-        padding-bottom: 3px;
-        text-decoration: none; }
+  nav a {
+    color: white;
+    padding: 0 20px; }
+  nav a:hover {
+    color: silver;
+    text-decoration: none; }
 
-#intro {
+header {
   height: 100vh;
   width: 100vw;
-  background: url("../img/piano-1.jpg") no-repeat center center; }
-  #intro h1 {
-    font-size: 6em; }
+  background: url("../img/piano-1.jpg") no-repeat center center;
+  color: white; }
+  header h1 {
+    font-size: 6em;
+    margin: 0 auto; }
+    header h1 span {
+      color: #aa2224; }
+  header #logo {
+    margin: 0 10vw;
+    text-transform: uppercase; }
+    header #logo h3, header #logo h1 {
+      text-align: left; }
+    header #logo h3 {
+      word-spacing: 0.5em; }
+
+footer {
+  height: 20vh;
+  width: 100vw; }
+  footer a {
+    color: black;
+    cursor: pointer; }
+  footer a:hover {
+    color: silver;
+    text-decoration: none; }
 
 #about {
   height: 40vh;
   width: 100vw;
   color: black; }
-
-#footer {
-  height: 20vh;
-  width: 100vw; }
-
-@media only screen and (max-height: 1000px) {
-  #nav #nav-bar-name {
-    font-size: 6vh; }
-  #nav .nav-buttons {
-    margin: auto 0vw auto 38vw; } }
-@media only screen and (max-width: 992px) {
-  #nav #nav-bar-name {
-    font-size: 3.8vh; }
-  #nav .nav-buttons {
-    margin: auto 0vw auto 20vw; } }
-@media only screen and (max-width: 675px) {
-  #nav #nav-bar-name {
-    font-size: 3.8vh; }
-  #nav .nav-buttons {
-    font-size: 1.8vh;
-    margin: auto 0vw auto 20vw; }
-  #nav .btn {
-    font-size: 1.8vh; } }
-@media only screen and (max-width: 480px) {
-  #nav .nav-buttons {
-    margin: auto auto; } }
 
 /*# sourceMappingURL=main.css.map */
